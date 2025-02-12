@@ -1,0 +1,7 @@
+width: 4
+T: 3
+burn_in: 50000
+num_samples_per_chain: 100000
+num_chains: 8
+num_samples_train: 5000
+num_samples_test: 50000

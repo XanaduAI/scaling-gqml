@@ -1,0 +1,8 @@
+n_nodes: 1000
+m: 2
+T: 1
+bias_weight: -.01
+burn_in: 10000
+num_samples_per_chain: 1000000
+num_chains: 8
+num_samples: 20000

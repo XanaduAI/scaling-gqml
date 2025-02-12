@@ -1,0 +1,5 @@
+n_spins: 16
+n_blobs: 8
+num_samples_train: 5000
+num_samples_test: 10000
+noise_prob: 0.05
