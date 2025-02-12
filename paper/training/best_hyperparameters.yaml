@@ -1,0 +1,375 @@
+IqpSimulator:
+  8_blobs:
+    gates_config:
+      name: "local_gates"
+      kwargs: {'n_qubits': 16, 'max_weight': 6}
+    model_config:
+      n_qubits: 16
+      sparse: False
+    trainer_config:
+      optimizer: 'Adam'
+      stepsize: 0.001
+    train_config:
+      n_iters: 10000
+      convergence_interval: 500
+    loss_config:
+      n_ops: 1000
+      n_samples: 1000
+      sigma: [0.6, 1.3]
+    init_config:
+      init_scale: 0.0001
+      param_noise: 0.0001
+
+  2D_ising:
+    gates_config:
+      name: "local_gates"
+      kwargs: { 'n_qubits': 16, 'max_weight': 4 }
+    model_config:
+      n_qubits: 16
+      sparse: False
+      spin_sym: True
+    trainer_config:
+      optimizer: 'Adam'
+      stepsize: 0.001
+    train_config:
+      n_iters: 10000
+      convergence_interval: 500
+    loss_config:
+      n_ops: 1000
+      n_samples: 1000
+      sigma: [0.6, 1.3]
+    init_config:
+      init_scale: 0.01
+      param_noise: 0.
+
+  spin_glass:
+    gates_config:
+      name: "local_gates"
+      kwargs: { 'n_qubits': 256, 'max_weight': 2 }
+    model_config:
+      n_qubits: 256
+      sparse: False
+      spin_sym: False
+    trainer_config:
+      optimizer: 'Adam'
+      stepsize: 0.0001
+    train_config:
+      n_iters: 10000
+      convergence_interval: 500
+    loss_config:
+      n_ops: 1000
+      n_samples: 1000
+      sigma: [31.75, 21.53, 11.31]
+    init_config:
+      init_scale: 0.01
+      param_noise: 0.
+
+  dwave:
+    gates_config:
+      name: "local_gates"
+      kwargs: { 'n_qubits': 484, 'max_weight': 2 }
+    model_config:
+      n_qubits: 484
+      sparse: False
+      spin_sym: False
+    trainer_config:
+      optimizer: 'Adam'
+      stepsize: 0.001
+    train_config:
+      n_iters: 2500
+      convergence_interval: 2500
+    loss_config:
+      n_ops: 1000
+      n_samples: 1000
+      sigma: [7.76208735, 6.1514226 , 3.92810387]
+    init_config:
+      init_scale: 0.001
+      param_noise: 0.
+
+  scale_free:
+    gates_config:
+      name: "local_gates"
+      kwargs: {'n_qubits': 1000, 'max_weight': 2}
+    model_config:
+      n_qubits: 1000
+      sparse: False
+    trainer_config:
+      optimizer: 'Adam'
+      stepsize: 0.001
+    train_config:
+      n_iters: 2000
+      convergence_interval: 500
+    loss_config:
+      n_ops: 1000
+      n_samples: 1000
+      sigma: [11.16914648,  8.3480109 ,  3.82475343]
+      indep_estimates: False
+    init_config:
+      init_scale: 0.01
+      param_noise: 0.
+
+  MNIST:
+    gates_config:
+      name: "local_gates"
+      kwargs: { 'n_qubits': 784, 'max_weight': 2 }
+    model_config:
+      n_qubits: 784
+      sparse: False
+    trainer_config:
+      optimizer: 'Adam'
+      stepsize: 0.001
+    train_config:
+      n_iters: 3000
+      convergence_interval: 3000
+    loss_config:
+      n_ops: 1000
+      n_samples: 1000
+      sigma: [9.88685997, 7.39053449, 3.38969025]
+    init_config:
+      init_scale: 0.001
+      param_noise: 0.
+
+  genomic-805:
+    gates_config:
+      name: "local_gates"
+      kwargs: { 'n_qubits': 805, 'max_weight': 2 }
+    model_config:
+      n_qubits: 805
+      sparse: False
+      spin_sym: False
+    trainer_config:
+      optimizer: 'Adam'
+      stepsize: 0.001
+    train_config:
+      n_iters: 1000
+      convergence_interval: 1000
+    loss_config:
+      n_ops: 1000
+      n_samples: 1000
+      sigma: [10.0187221 ,  7.70050841,  4.26859077]
+    init_config:
+      init_scale: 0.001
+      param_noise: 0.
+
+IqpSimulatorBitflip:
+  8_blobs:
+    gates_config:
+      name: "local_gates"
+      kwargs: {'n_qubits': 16, 'max_weight': 4}
+    model_config:
+      n_qubits: 16
+      sparse: False
+    trainer_config:
+      optimizer: 'Adam'
+      stepsize: 0.001
+    train_config:
+      n_iters: 10000
+      convergence_interval: 500
+    loss_config:
+      n_ops: 100
+      n_samples: 100
+      sigma: [0.6, 1.3]
+    init_config:
+      init_scale: 1.0
+      param_noise: 0.0001
+
+  2D_ising:
+    gates_config:
+      name: "local_gates"
+      kwargs: { 'n_qubits': 16, 'max_weight': 6 }
+    model_config:
+      n_qubits: 16
+      sparse: False
+      spin_sym: True
+    trainer_config:
+      optimizer: 'Adam'
+      stepsize: 0.001
+    train_config:
+      n_iters: 10000
+      convergence_interval: 500
+    loss_config:
+      n_ops: 1000
+      n_samples: 1000
+      sigma: [0.6, 1.3]
+    init_config:
+      init_scale: 0.0001
+      param_noise: 0.0001
+
+  spin_glass:
+    gates_config:
+      name: "local_gates"
+      kwargs: { 'n_qubits': 256, 'max_weight': 2 }
+    model_config:
+      n_qubits: 256
+      sparse: False
+      spin_sym: True
+    trainer_config:
+      optimizer: 'Adam'
+      stepsize: 0.001
+    train_config:
+      n_iters: 10000
+      convergence_interval: 500
+    loss_config:
+      n_ops: 1000
+      n_samples: 1000
+      sigma: [31.75, 21.53, 11.31]
+    init_config:
+      init_scale: 0.0001
+      param_noise: 0.
+
+  dwave:
+    gates_config:
+      name: "local_gates"
+      kwargs: { 'n_qubits': 484, 'max_weight': 2 }
+    model_config:
+      n_qubits: 484
+      sparse: False
+      spin_sym: False
+    trainer_config:
+      optimizer: 'Adam'
+      stepsize: 0.001
+    train_config:
+      n_iters: 2500
+      convergence_interval: 2500
+    loss_config:
+      n_ops: 1000
+      n_samples: 1000
+      sigma: [7.76208735, 6.1514226 , 3.92810387]
+    init_config:
+      init_scale: -1
+      param_noise: 0.
+
+  scale_free:
+    gates_config:
+      name: "nearest_neighbour_gates"
+      kwargs: { 'G': '../datasets/ising/scale_free_dataset/graph.adjlist', 'distance': 1 }
+    model_config:
+      n_qubits: 1000
+      sparse: False
+    trainer_config:
+      optimizer: 'Adam'
+      stepsize: 0.001
+    train_config:
+      n_iters: 10000
+      convergence_interval: 500
+    loss_config:
+      n_ops: 1000
+      n_samples: 1000
+      sigma: [11.16914648,  8.3480109 ,  3.82475343]
+      indep_estimates: False
+    init_config:
+      init_scale: -1
+      param_noise: 0.
+
+  MNIST:
+    gates_config:
+      name: "local_gates"
+      kwargs: { 'n_qubits': 784, 'max_weight': 2 }
+    model_config:
+      n_qubits: 784
+      sparse: True
+    trainer_config:
+      optimizer: 'Adam'
+      stepsize: 0.001
+    train_config:
+      n_iters: 3000
+      convergence_interval: 3000
+    loss_config:
+      n_ops: 1000
+      n_samples: 1000
+      sigma: [9.88685997, 7.39053449, 3.38969025]
+      indep_estimates: False
+    init_config:
+      init_scale: -1
+      param_noise: 0.
+
+  genomic-805:
+    gates_config:
+      name: "local_gates"
+      kwargs: { 'n_qubits': 805, 'max_weight': 2 }
+    model_config:
+      n_qubits: 805
+      sparse: True
+      spin_sym: False
+    trainer_config:
+      optimizer: 'Adam'
+      stepsize: 0.001
+    train_config:
+      n_iters: 1000
+      convergence_interval: 1000
+    loss_config:
+      n_ops: 1000
+      n_samples: 1000
+      sigma: [10.0187221 ,  7.70050841,  4.26859077]
+    init_config:
+      init_scale: 0.0001
+      param_noise: 0.
+
+RestrictedBoltzmannMachine:
+  8_blobs:
+    n_components: 64
+    learning_rate: 0.01
+    batch_size: 64
+    n_iter: 10000
+
+  2D_ising:
+    n_components: 256
+    learning_rate: 0.0001
+    batch_size: 32
+    n_iter: 10000
+
+  spin_glass:
+    n_components: 1024
+    learning_rate: 0.00001
+    batch_size: 64
+    n_iter: 10000
+
+  dwave:
+    n_components: 1024
+    learning_rate: 0.00001
+    batch_size: 64
+    n_iter: 5000
+
+  scale_free:
+    n_components: 250
+    learning_rate: 0.001
+    batch_size: 32
+    n_iter: 5000
+
+DeepEBM:
+  8_blobs:
+    batch_size: 32
+    cdiv_steps: 10
+    hidden_layers: [100]
+    learning_rate: 0.0001
+    max_steps: 500000
+
+  2D_ising:
+    batch_size: 32
+    cdiv_steps: 10
+    hidden_layers: [16, 4, 2]
+    learning_rate: 0.001
+    max_steps: 500000
+
+  spin_glass:
+    batch_size: 64
+    cdiv_steps: 1
+    hidden_layers: [ 5000 ]
+    learning_rate: 0.00001
+    max_steps: 1000000
+
+  dwave:
+    batch_size: 64
+    cdiv_steps: 1
+    hidden_layers: [ 484 ]
+    learning_rate: 0.00001
+    max_steps: 5000000
+
+DeepGraphEBM:
+  scale_free:
+    batch_size: 64
+    cdiv_steps: 10
+    n_layers: 1
+    learning_rate: 0.0001
+    max_steps: 2000000
+
