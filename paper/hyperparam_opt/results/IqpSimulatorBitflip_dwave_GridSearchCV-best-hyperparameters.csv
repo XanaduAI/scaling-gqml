@@ -1,0 +1,13 @@
+hyperparameter,best_value
+convergence_interval,1000
+gate_arg2,2
+gate_fn,local_gates
+init_scale,-1.0
+n_iters,1000
+n_ops,1000
+n_ops_score,1000
+n_samples,1000
+n_samples_score,1000
+n_sigmas,3
+stepsize,0.001
+turbo,10

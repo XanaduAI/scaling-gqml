@@ -1,0 +1,6 @@
+hyperparameter,best_value
+batch_size,32
+cdiv_steps,10
+hidden_layers,"(16, 4, 2)"
+learning_rate,0.001
+max_steps,50000

@@ -1,0 +1,7 @@
+hyperparameter,best_value
+batch_size,32
+learning_rate,0.001
+n_components,250
+n_iter,1000
+score_fn,mmd
+verbose,3

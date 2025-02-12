@@ -1,0 +1,15 @@
+hyperparameter,best_value
+convergence_interval,200
+gate_arg2,4
+gate_fn,local_gates
+init_scale,1.0
+n_ancilla,0
+n_iters,10000
+n_ops,1000
+n_ops_score,1000
+n_samples,1000
+n_samples_score,1000
+n_sigmas,1.0
+param_noise,0.0001
+spin_sym,False
+stepsize,0.001
