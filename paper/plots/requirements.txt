@@ -1,0 +1,11 @@
+iqpopt==2024.7.0
+jax==0.4.31
+matplotlib==3.9.2
+matplotlib_label_lines==0.7.0
+networkx==3.3
+numpy==2.1.3
+pandas==2.2.3
+PyYAML==6.0.2
+qml_benchmarks==0.1
+rsmf==0.2.1
+utils==1.0.2
