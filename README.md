@@ -2,7 +2,17 @@
 
 Arxiv paper: XXXX:XXXX
 
+The code in this repository can be used to reproduce the results of the paper. 
+
+Scripts to generate or download the datasets can be found in the
+paper/datasets folder. Large datasets that take considerable time to download are also avaliable in Pennylane's dataset module (in progress). 
+
+Instructions on how to load and sample from the trained models can be found in paper/README.md
+
 Dependencies:
-- IQPopt (https://github.com/XanaduAI/iqpopt/tree/main/src/iqpopt)
-- qml-benchmarks (https://github.com/XanaduAI/qml-benchmarks/tree/generative_models/src/qml_benchmarks/models)
+- IQPopt (https://github.com/XanaduAI/iqpopt)
+- qml-benchmarks (https://github.com/XanaduAI/qml-benchmarks)
+
+
+contact (Joseph Bowles): bowles.physics@gmail.com
 
