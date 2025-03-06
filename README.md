@@ -1,6 +1,6 @@
 # Code repository for *Train on classical, deploy on quantum: scaling generative quantum machine learning to a thousand qubits*
 
-Arxiv paper: XXXX:XXXX
+Arxiv paper: [2503.02934](https://arxiv.org/abs/2503.02934)
 
 The code in this repository can be used to reproduce the results of the paper. 
 
