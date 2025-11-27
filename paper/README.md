@@ -1,12 +1,6 @@
 # How to load and sample trained models
 
 ```python
-import sys
-sys.path.append("paper")
-from qml_benchmarks.models import DeepEBM, RestrictedBoltzmannMachine
-from flax_utils import DeepGraphEBM
-from iqpopt import *
-from iqpopt.utils import *
 import numpy as np
 import yaml
 import pickle
@@ -20,6 +14,8 @@ X = np.loadtxt('paper/datasets/ising/2d_random_lattice_dataset/ising_4_4_T_3_tra
 ## RBM
 Load model directly with pickle
 ```python
+from qml_benchmarks.models import RestrictedBoltzmannMachine
+
 with open('paper/training/trained_parameters/params_RestrictedBoltzmannMachine_2D_ising.pkl', 'rb') as f:
     rbm_model = pickle.load(f)
 sample = rbm_model.sample(100)
@@ -28,6 +24,8 @@ sample = rbm_model.sample(100)
 ## DeepEBM
 Load using qml benchmarks package
 ```python
+from qml_benchmarks.models import DeepEBM
+
 with open('paper/training/trained_parameters/params_DeepEBM_2D_ising.pkl', 'rb') as f:
     params_ebm = pickle.load(f)
 
@@ -39,6 +37,10 @@ ebm_model.sample(100)
 
 ## DeepGraphEBM
 ```python
+import sys
+sys.path.append("paper")
+from flax_utils import DeepGraphEBM
+
 with open('paper/training/trained_parameters/params_DeepGraphEBM_scale_free.pkl', 'rb') as f:
     params_gebm = pickle.load(f)
 
@@ -55,6 +57,9 @@ ebm_model.sample(100)
 
 ## IqpSimulator
 ```python
+from iqpopt import *
+from iqpopt.utils import *
+
 with open('paper/training/trained_parameters/params_IqpSimulator_2D_ising.pkl', 'rb') as f:
     params_iqp = pickle.load(f)
 
@@ -62,5 +67,5 @@ gate_fn = globals()[best_hyperparams['IqpSimulator']['2D_ising']['gates_config']
 gates = gate_fn(**best_hyperparams['IqpSimulator']['2D_ising']['gates_config']['kwargs'])
 
 model = IqpSimulator(**best_hyperparams['IqpSimulator']['2D_ising']['model_config'], gates=gates)
-model.sample(params_iqp, 100)
+model.sample(params_iqp, shots=100)
 ```
